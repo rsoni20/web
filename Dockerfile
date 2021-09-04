@@ -19,3 +19,7 @@ EXPOSE 80
 FROM nginx:1.17.1-alpine
 
 COPY --from=build /app/dist/web /usr/share/nginx/html
+
+
+#docker build -t todolist-web-image .
+#docker run -d -p 4200:80 --name todolist-web-container  todolist-web-image
